@@ -21,14 +21,14 @@ public class StudentmanagmentApplicationTests {
     @Autowired
     StudentService studentService;
 
-    @Test
-    public void contextLoads() {
-        Login login = new Login();
-        login.setUsername("admin");
-        login.setPassword("root");
-
+//    @Test
+//    public void contextLoads() {
+//        Login login = new Login();
+//        login.setUsername("admin");
+//        login.setPassword("root");
+////        login =
 //        Assert.assertTrue(loginService.findUser(login));
-    }
+//    }
 //
 //    @Test
 //    public void validateStudentDetailsById() {
@@ -44,11 +44,11 @@ public class StudentmanagmentApplicationTests {
     @Test
     public void validateAddStudent(){
         Studentdetails studentdetails = new Studentdetails();
-        studentdetails.setId("6");
-        studentdetails.setName("Ankit");
+        studentdetails.setId("7");
+        studentdetails.setName("Himanshu");
         studentdetails.setAddress("Delhi");
         studentdetails.setBranch("CS");
-        studentdetails.setCgpa("8");
+        studentdetails.setCgpa("7");
         Assert.assertTrue(studentService.addStudent(studentdetails));
     }
 }

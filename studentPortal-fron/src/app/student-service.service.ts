@@ -13,22 +13,22 @@ export class StudentServiceService {
   constructor(private http: HttpClient) { }
 
   public getStudentList(): any {
-    const url = 'http://172.31.40.41:8080/listStudents';
+    const url = 'http://13.233.138.60:8080/listStudents';
     return this.http.get(url);
   }
 
 public getStudent(id: string): any {
-    const url = 'http://172.31.40.41:8080/listStudents/showStudentDetails/' + id;
+    const url = 'http://13.233.138.60:8080/listStudents/showStudentDetails/' + id;
     return this.http.get(url);
 }
 
 public addStudent(student: Studentdetails): any {
-  const url = 'http://172.31.40.41:8080/listStudents/addStudent';
+  const url = 'http://13.233.138.60:8080/listStudents/addStudent';
   return this.http.post<boolean>(url, student);
 }
 
 public deleteStudent(id: string): any {
-  const url = 'http://172.31.40.41:8080/listStudents/deleteStudent/' + id;
+  const url = 'http://13.233.138.60:8080/listStudents/deleteStudent/' + id;
   return this.http.get(url);
 }
 }
