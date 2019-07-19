@@ -44,11 +44,11 @@ public class StudentmanagmentApplicationTests {
     @Test
     public void validateAddStudent(){
         Studentdetails studentdetails = new Studentdetails();
-        studentdetails.setId("7");
-        studentdetails.setName("Himanshu");
+        studentdetails.setId("9");
+        studentdetails.setName("Sarthak");
         studentdetails.setAddress("Delhi");
         studentdetails.setBranch("CS");
-        studentdetails.setCgpa("7");
+        studentdetails.setCgpa("4");
         Assert.assertTrue(studentService.addStudent(studentdetails));
     }
 }
