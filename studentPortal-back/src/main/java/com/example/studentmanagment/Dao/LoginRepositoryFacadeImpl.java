@@ -16,10 +16,10 @@ public class LoginRepositoryFacadeImpl {
             if(login1.getPassword().equals(login.getPassword())){
                 return login1;
             }else {
-                return login1;
+                return null;
             }
         }else{
-            return login1;
+            return null;
         }
     }
 

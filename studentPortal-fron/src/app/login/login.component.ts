@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
   }
 
   sendFeedback(): void {
-  const url = 'http://13.233.138.60:8080/login';
+  const url = 'http://localhost:8080/login';
   this.http.post<Login>(url, this.login).subscribe(res => {
     if (res != null && res.professor) {
     console.log('Logged In as professor');
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
       this.loggedIn = true;
       LoginComponent.login1 = res;
       this.router.navigate(['studentHomePage']);
-    } else {
+    } else if (res === null) {
       this.loggedIn = false;
       console.log('Not Logged in');
     }
