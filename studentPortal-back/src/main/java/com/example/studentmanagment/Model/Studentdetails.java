@@ -16,6 +16,15 @@ public class Studentdetails {
     private String email; //optional
     private String phone; //optional
     private int landline;//optional
+    private int courseid;//optional
+
+    public int getCourseid() {
+        return courseid;
+    }
+
+    public void setCourseid(int courseid) {
+        this.courseid = courseid;
+    }
 
     public Studentdetails(){
 

@@ -17,6 +17,9 @@ import { FormValidationComponent } from './form-validation/form-validation.compo
 import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
 import { StudentHomePageComponent } from './student-home-page/student-home-page.component';
+import { CoursesComponent } from './courses/courses.component';
+import { CourseDetailsComponent } from './course-details/course-details.component';
+import { AddStudentsToCourseComponent } from './add-students-to-course/add-students-to-course.component';
 
 const appRoutes: Routes = [
   {
@@ -48,6 +51,15 @@ const appRoutes: Routes = [
   },{
     path: 'studentHomePage',
     component: StudentHomePageComponent
+  },{
+    path: 'courses',
+    component: CoursesComponent
+  },{
+    path: 'courseDetails',
+    component: CourseDetailsComponent
+  },{
+    path: 'addStudentsToCourse',
+    component: AddStudentsToCourseComponent
   }
 ];
 
@@ -64,7 +76,10 @@ const appRoutes: Routes = [
     FormValidationComponent,
     LogoutComponent,
     RegisterComponent,
-    StudentHomePageComponent
+    StudentHomePageComponent,
+    CoursesComponent,
+    CourseDetailsComponent,
+    AddStudentsToCourseComponent
   ],
   imports: [
     BrowserModule,
@@ -98,4 +113,10 @@ export class Studentdetails {
   email: string;
   phone: string;
   landline: number;
+  courseid: number;
+}
+
+export class Courses {
+  courseid: number;
+  name: string;
 }

@@ -7,13 +7,21 @@ import {Router} from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor(private router : Router) { }
+  hamburger = false;
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   logOut() {
     this.router.navigate(['']);
+  }
+
+  hamburgerClick() {
+    this.hamburger = !this.hamburger;
+  }
+
+  goToCourses() {
+    this.router.navigate(['courses']);
   }
 }

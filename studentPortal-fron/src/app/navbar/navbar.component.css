@@ -23,4 +23,9 @@
 
 .colored{background-color:darkslategray!important}a.bg-success:focus,a.bg-success:hover,button.bg-success:focus,button.bg-success:hover{background-color: #1c407e !important}
 
+ul {
+  list-style-type: none;
+}
+
+
 

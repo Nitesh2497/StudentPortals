@@ -1,15 +1,87 @@
-<nav class="navbar navbar-expand-sm colored navbar-dark justify-content-between">
-  <ul class="navbar-nav ">
-    <li class="nav-item ">
-      <a class="nav-link" routerLink="/listStudents" routerLinkActive="active">List Students</a>
-    </li>
-    <li class="nav-item ">
-      <a class="nav-link" routerLink="addStudent" routerLinkActive="active">Add Students</a>
-    </li>
-  </ul>
-  <ul class="d-flex flex-row-reverse navbar-nav">
-    <li class="nav-item ">
-      <a class="nav-link " (click)="logOut()">Logout</a>
-    </li>
-  </ul>
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--<nav class="navbar navbar-expand-sm colored navbar-dark justify-content-between">-->
+  <!--<ul class="navbar-nav ">-->
+    <!--<li class="nav-item ">-->
+      <!--<a class="nav-link" routerLink="/listStudents" routerLinkActive="active">List Students</a>-->
+    <!--</li>-->
+    <!--<li class="nav-item ">-->
+      <!--<a class="nav-link" routerLink="addStudent" routerLinkActive="active">Add Students</a>-->
+    <!--</li>-->
+  <!--</ul>-->
+  <!--<ul class="d-flex flex-row-reverse navbar-nav">-->
+    <!--<li class="nav-item ">-->
+      <!--<a class="nav-link " (click)="logOut()">Logout</a>-->
+    <!--</li>-->
+  <!--</ul>-->
+<!--</nav>-->
+
+<!--<div *ngIf="hamburger">-->
+  <!--<ul class="navbar-nav ">-->
+    <!--<li class="nav-item ">-->
+      <!--<a class="nav-link" routerLink="/listStudents" routerLinkActive="active">List Students</a>-->
+    <!--</li>-->
+    <!--<li class="nav-item ">-->
+      <!--<a class="nav-link" routerLink="addStudent" routerLinkActive="active">Add Students</a>-->
+    <!--</li>-->
+  <!--</ul>-->
+  <!--<ul class="d-flex flex-row-reverse navbar-nav">-->
+    <!--<li class="nav-item ">-->
+      <!--<a class="nav-link " (click)="logOut()">Logout</a>-->
+    <!--</li>-->
+  <!--</ul>-->
+<!--</div>-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-light topNav colored">
+  <button class="navbar-toggler" type="button" (click)="hamburgerClick()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="listStudents" routerLinkActive="active">List Students</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="addStudent" routerLinkActive="active">Add Students</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="goToCourses()" routerLinkActive="active">Courses</a>
+      </li>
+      <!--<li class="nav-item">-->
+        <!--<button class="nav-link" (click)="goToPassengerDetails()">Get passenger details</button>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<button class="nav-link" (click)="goToCancelReservation()">Cancel reservation</button>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<button class="nav-link" (click)="goToClassAvailability()">Get availability</button>-->
+      <!--</li>-->
+    </ul>
+    <!--  </div>-->
+    <!--  <div class="collapse navbar-collapse">-->
+    <ul class="navbar-nav float-right">
+      <li class="nav-item">
+        <a class="nav-link" (click)="logOut()">Logout</a>
+      </li>
+      <!--<li class="nav-item">-->
+        <!--<button class="nav-link float-right" (click)="goToRegister()">Register</button>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<button class="nav-link float-right" (click)="goToLogin()">Login</button>-->
+      <!--</li>-->
+    </ul>
+  </div>
 </nav>
+<div *ngIf="hamburger">
+  <ul>
+    <li><a routerLink="/listStudents" routerLinkActive="active">List Students</a></li>
+    <li><a routerLink="addStudent" routerLinkActive="active">Add Students</a></li>
+    <!--<li><a (click)="goToPassengerDetails()">Get Passenger details</a></li>-->
+    <!--<li><a (click)="goToCancelReservation()">Cancel Reservation</a></li>-->
+    <!--<li><a (click)="goToClassAvailability()">Get Availability</a></li>-->
+    <li><a (click)="logOut()">Logout</a></li>
+  </ul>
+  <!--<ul>-->
+    <!--<li><a (click)="goToHome()">Home</a></li>-->
+    <!--<li><a (click)="goToRegister()">Register</a></li>-->
+    <!--<li><a (click)="goToLogin()">Login</a></li>-->
+  <!--</ul>-->
+</div>

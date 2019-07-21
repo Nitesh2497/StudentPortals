@@ -36,5 +36,19 @@ public class studentDetailsController {
         return studentService.deleteStudent(studentId);
     }
 
+    @RequestMapping("/courseDetails/{courseId}")
+    public List<Studentdetails> getStudentsInCourse(@PathVariable Integer courseId,Model model){
+        return studentService.getStudentsInCourse(courseId);
+    }
+
+    @RequestMapping("/addStudentsToCourse/{courseId}")
+    public List<Studentdetails> getStudentsNotInCourse(@PathVariable Integer courseId,Model model){
+        return studentService.getStudentsNotInCourse(courseId);
+    }
+
+    @RequestMapping("/addStudentsToCourse/{courseId}/{studentId}")
+    public Boolean addStudentInCourse(@PathVariable Integer courseId,@PathVariable String studentId,Model model){
+        return studentService.addStudentInCourse(courseId, studentId);
+    }
 
 }
