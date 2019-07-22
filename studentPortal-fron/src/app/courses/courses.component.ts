@@ -30,7 +30,7 @@ export class CoursesComponent implements OnInit {
   }
 
   public getCourses(): any {
-    const url = 'http://localhost:8080/courses';
+    const url = 'http://13.233.138.60:8080/courses';
     this.http.get(url).subscribe((res: any[]) => {
       this.courses = res;
       console.log('Courses Returned');

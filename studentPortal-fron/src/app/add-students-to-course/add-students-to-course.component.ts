@@ -20,7 +20,7 @@ export class AddStudentsToCourseComponent implements OnInit {
   }
 
   public fetchStudentsNotInCourse(): any {
-    const url = 'http://localhost:8080/addStudentsToCourse/' + CoursesComponent.courseid;
+    const url = 'http://13.233.138.60:8080/addStudentsToCourse/' + CoursesComponent.courseid;
     this.http.get(url).subscribe((res: any[]) => {
       this.students = res;
       this.ngOnInit();
@@ -28,7 +28,7 @@ export class AddStudentsToCourseComponent implements OnInit {
 }
 
   addStudentToCourse(id: string) {
-    const url = 'http://localhost:8080/addStudentsToCourse/' + CoursesComponent.courseid + '/' + id;
+    const url = 'http://13.233.138.60:8080/addStudentsToCourse/' + CoursesComponent.courseid + '/' + id;
     this.http.get(url).subscribe(res => {
       if (res) {
         console.log('Student Added To Course');

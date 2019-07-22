@@ -56,7 +56,7 @@ export class RegisterComponent implements OnInit {
       this.verification = false;
       return;
     } else {
-      const url = 'http://localhost:8080/register';
+      const url = 'http://13.233.138.60:8080/register';
       this.http.post<boolean>(url, this.registerUser).subscribe(
         res => {
           if (res) {
@@ -73,7 +73,7 @@ export class RegisterComponent implements OnInit {
   }
 
   // userNameAvailability(): boolean {
-  //   const url = 'http://localhost:8080/usernameAvailability';
+  //   const url = 'http://13.233.138.60:8080/usernameAvailability';
   //   this.http.post<boolean>(url, this.registerUser).subscribe(
   //     res => {
   //       if (!res) {
