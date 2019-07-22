@@ -21,11 +21,12 @@ export class CourseDetailsComponent implements OnInit {
   }
 
   public fetchStudentWithSpecificCourse(): any {
-    const url = 'http://13.233.138.60:8080/courseDetails/' + CoursesComponent.courseid;
+    const url = 'http://localhost:8080/courseDetails/' + CoursesComponent.courseid;
     this.http.get(url).subscribe((res: any[]) => {
       this.students = res;
       this.totalStudents = res.length;
       console.log('Got back details of students of specific course');
+      // this.ngOnInit();
     });
   }
 

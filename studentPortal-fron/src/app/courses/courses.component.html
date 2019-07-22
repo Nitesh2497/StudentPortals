@@ -5,7 +5,7 @@
   <h5 class="card-header">CourseId : {{course.courseid}} </h5>
   <div class="card-body">
     <h5 class="card-title">Course Title : {{course.name}} </h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <p class="card-text">{{course.description}}</p>
     <button class="btn btn-primary bg-dark stretched-link"  (click)="goToSelectedCourse(course.courseid)"  style="float: right">View Details</button>
   </div>
 </div>

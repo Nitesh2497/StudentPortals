@@ -21,25 +21,32 @@ public class StudentmanagmentApplicationTests {
     @Autowired
     StudentService studentService;
 
-//    @Test
-//    public void contextLoads() {
-//        Login login = new Login();
-//        login.setUsername("admin");
-//        login.setPassword("root");
-////        login =
-//        Assert.assertTrue(loginService.findUser(login));
-//    }
-//
-//    @Test
-//    public void validateStudentDetailsById() {
-////        Studentdetails studentdetails = new Studentdetails();
-//        Assert.assertNotNull(studentService.getStudentDetail("1"));
-//    }
-//
-//    @Test
-//    public void validateDeleteStudent(){
-//        Assert.assertTrue(studentService.deleteStudent("1"));
-//    }
+    @Test
+    public void validateLoginCredentials(){
+        Login login = new Login();
+        login.setUsername("amank");
+        login.setPassword("root");
+        Login login1 = loginService.findUser(login);
+        Assert.assertEquals("Aman",login1.getName());
+    }
+
+    @Test
+    public void validateRegister(){
+        Login login = new Login();
+        login.setUsername("ank");
+        login.setName("Ankith");
+        login.setPassword("root");
+        login.setEmail("ankith@oracle.com");
+        login.setProfessor(false);
+        login.setPhone("9790001478");
+        Assert.assertTrue(loginService.registerUser(login));
+    }
+
+    @Test
+    public void validateStudentNameById() {
+        Studentdetails studentdetails = new Studentdetails();
+        Assert.assertEquals("Nikhil",studentService.getStudentDetail("1").getName());
+    }
 
     @Test
     public void validateAddStudent(){
@@ -52,4 +59,11 @@ public class StudentmanagmentApplicationTests {
         studentdetails.setCourseid(0);
         Assert.assertTrue(studentService.addStudent(studentdetails));
     }
+
+    @Test
+    public void validateAddStudentInCourse(){
+        Assert.assertTrue(studentService.addStudentInCourse(1,"1"));
+    }
+
+
 }

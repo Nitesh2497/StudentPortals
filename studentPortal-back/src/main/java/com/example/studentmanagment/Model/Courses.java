@@ -9,6 +9,15 @@ public class Courses {
     @Id
     private int courseid;
     private String name;
+    private String description;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public Courses() {
     }

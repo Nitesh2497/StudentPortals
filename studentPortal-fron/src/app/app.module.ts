@@ -119,4 +119,5 @@ export class Studentdetails {
 export class Courses {
   courseid: number;
   name: string;
+  description: string;
 }

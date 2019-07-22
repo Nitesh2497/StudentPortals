@@ -40,7 +40,7 @@
         <label>Phone No: </label>
         <br>
         <input  [(ngModel)]="registerUser.phone" class="form-control" maxlength="10" minlength="10"
-                name="password" type="text">1
+                name="password" type="text">
         <a *ngIf="!validContact" style="color:red;font-size:13px">Invalid Phone Number</a>
       </div>
       <button type="submit" id="submit" class="btn btn-success">Submit</button>
