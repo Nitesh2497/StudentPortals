@@ -49,6 +49,7 @@ public class StudentmanagmentApplicationTests {
         studentdetails.setAddress("Delhi");
         studentdetails.setBranch("CS");
         studentdetails.setCgpa("4");
+        studentdetails.setCourseid(0);
         Assert.assertTrue(studentService.addStudent(studentdetails));
     }
 }
