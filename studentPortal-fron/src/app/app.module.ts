@@ -33,7 +33,7 @@ const appRoutes: Routes = [
     path: 'listStudents',
     component: ListStudentsComponent
   }, {
-    path: 'listStudents/addStudent',
+    path: 'addStudent',
     component: AddStudentComponent
   }, {
     path: 'listStudents/deleteStudent',

@@ -1,35 +1,47 @@
-<div>
+<!--<div>-->
   <!--<h1>Student Details </h1>-->
   <app-navbar></app-navbar>
   <br>
-  <table>
-    <th>StudentId</th>
-    <th>Name</th>
-     <th>Branch</th>
-     <th>CGPA</th>
-     <th>Details</th>
-     <th>Update Details</th>
-     <!--<th>Add Student</th>-->
-      <!--<th>Delete Student</th>-->
-    <!--<tr *ngFor="let students of student">-->
-      <!--<td>{{ students.id }}</td>-->
-      <!--<td>{{ students.name }}</td>-->
-      <!--<td>{{ students.branch }}</td>-->
-      <!--<td>{{ students.cgpa }}</td>-->
-    <tr *ngFor="let student of students">
-      <td>{{ student.id }}</td>
-      <td>{{ student.name }}</td>
-      <td>{{ student.branch }}</td>
-      <td>{{ student.cgpa }}</td>
-      <td><button class="button1" (click)="sendId(student.id)" routerLink="showStudentDetails" routerLinkActive="active">Details</button></td>
-      <td><button class="button1" (click)="sendId(student.id)" routerLink="updateStudentDetails" routerLinkActive="active">Update Details</button></td>
-      <!--<td><button class="button1" routerLink="addStudent" routerLinkActive="active">Add Student</button></td>-->
-      <!--<td><button class="button1" (click)="deleteStudent(student.id)" routerLinkActive="active">Delete Student</button></td>-->
-    </tr>
-  </table>
-  <br/>
-  <br/>
-</div>
+  <!--<table>-->
+    <!--<th>StudentId</th>-->
+    <!--<th>Name</th>-->
+     <!--<th>Branch</th>-->
+     <!--<th>CGPA</th>-->
+     <!--<th>Details</th>-->
+     <!--<th>Update Details</th>-->
+     <!--&lt;!&ndash;<th>Add Student</th>&ndash;&gt;-->
+      <!--&lt;!&ndash;<th>Delete Student</th>&ndash;&gt;-->
+    <!--&lt;!&ndash;<tr *ngFor="let students of student">&ndash;&gt;-->
+      <!--&lt;!&ndash;<td>{{ students.id }}</td>&ndash;&gt;-->
+      <!--&lt;!&ndash;<td>{{ students.name }}</td>&ndash;&gt;-->
+      <!--&lt;!&ndash;<td>{{ students.branch }}</td>&ndash;&gt;-->
+      <!--&lt;!&ndash;<td>{{ students.cgpa }}</td>&ndash;&gt;-->
+    <!--<tr *ngFor="let student of students">-->
+      <!--<td>{{ student.id }}</td>-->
+      <!--<td>{{ student.name }}</td>-->
+      <!--<td>{{ student.branch }}</td>-->
+      <!--<td>{{ student.cgpa }}</td>-->
+      <!--<td><button class="button1" (click)="sendId(student.id)" routerLink="showStudentDetails" routerLinkActive="active">Details</button></td>-->
+      <!--<td><button class="button1" (click)="sendId(student.id)" routerLink="updateStudentDetails" routerLinkActive="active">Update Details</button></td>-->
+    <!--</tr>-->
+  <!--</table>-->
+  <!--<br/>-->
+  <!--<br/>-->
+<!--</div>-->
 
-<!--(click)="showDetails(students)"-->
+<div *ngFor="let student of students">
+<div class="card border-dark mb-3" style="height: fit-content">
+  <div class="card-header">StudentId:{{student.id}}</div>
+  <div class="card-body text-dark">
+    <img src="assets/image/img_avatar.png" alt="Avatar" style="width:150px;float: left;margin-right: 5px">
+    <div class="">
+    <h5 class="card-title">Name:{{student.name}}</h5>
+    <p>Branch: {{student.branch}}</p>
+    <p>Cgpa: {{student.cgpa}}</p>
+    <button class="btn btn-dark" (click)="sendId(student.id)" routerLink="showStudentDetails">Details</button>
+    <button class="btn btn-dark" (click)="sendId(student.id)" routerLink="updateStudentDetails">Update Details</button>
+    </div>
+  </div>
+</div>
+</div>
 

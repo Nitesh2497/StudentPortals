@@ -37,13 +37,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLink="listStudents" routerLinkActive="active">List Students</a>
+        <button class="btn"  style="color:white" (click)="goToListStudents()">List Students</button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="addStudent" routerLinkActive="active">Add Students</a>
+        <button class="btn" style="color:white" (click)="goToAddStudent()">Add Students</button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" (click)="goToCourses()" routerLinkActive="active">Courses</a>
+        <button class="btn" style="color:white" (click)="goToCourses()" routerLinkActive="active">Courses</button>
       </li>
       <!--<li class="nav-item">-->
         <!--<button class="nav-link" (click)="goToPassengerDetails()">Get passenger details</button>-->
@@ -59,7 +59,7 @@
     <!--  <div class="collapse navbar-collapse">-->
     <ul class="navbar-nav float-right">
       <li class="nav-item">
-        <a class="nav-link" (click)="logOut()">Logout</a>
+        <button class="btn" style="color:white" (click)="logOut()">Logout</button>
       </li>
       <!--<li class="nav-item">-->
         <!--<button class="nav-link float-right" (click)="goToRegister()">Register</button>-->

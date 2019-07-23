@@ -24,4 +24,12 @@ export class NavbarComponent implements OnInit {
   goToCourses() {
     this.router.navigate(['courses']);
   }
+
+  goToAddStudent() {
+    this.router.navigate(['addStudent']);
+  }
+
+  goToListStudents() {
+    this.router.navigate(['listStudents']);
+  }
 }
